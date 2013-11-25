@@ -12,34 +12,54 @@ class UserService {
             email: params.email
         )
 
-        if ("surveyor".equalsIgnoreCase(params.userType)) {
-            Role surveyorRole = Role.findByName("Surveyor")
-            newUser.addToRoles(surveyorRole)
-            new SurveyorProfile(
-                email: params.email,
-                companyName: params.company,
-                userAccount: newUser
-            ).save()
-            newUser.save()
-        } else if ("respondent".equalsIgnoreCase(params.userType)) {
-            def respondentRole = Role.findByName("Respondent")
-            newUser.addToRoles(respondentRole)
-            newUser.respondentProfile = new RespondentProfile()
-            newUser.save()
-            params.id = newUser.id
-            respondentService.updateRespondentDetail(params)
-            // reference point
-            respondentService.processReference(params.referrer, newUser)
-        } else if ("admin".equalsIgnoreCase(params.userType)) {
-            Role adminRole = Role.findByName("Admin")
-            newUser.addToRoles(adminRole)
-            newUser.save()
-        }
+        newUser.save()
 
-        if (!newUser) {
-            throw new Exception("Unable to create user")
-        } else if (newUser.hasErrors()) {
-            throw new Exception("${newUser.errors.allErrors}")
+        if (newUser && !newUser.hasErrors()) {
+            try {
+
+                Role role
+
+                switch(params.userType){
+                    case "surveyor" :
+                        role = Role.findByName("Surveyor")
+
+                        new SurveyorProfile(
+                                email: params.email,
+                                companyName: params.company,
+                                userAccount: newUser
+                        ).save()
+                    break
+
+                    case "respondent" :
+                        role = Role.findByName("Respondent")
+
+                        newUser.respondentProfile = new RespondentProfile()
+                        newUser.save()
+                        params.id = newUser.id
+                        respondentService.updateRespondentDetail(params)
+                        // reference point
+                        respondentService.processReference(params.referrer, newUser)
+                    break
+
+                    case "admin" :
+                        role = Role.findByName("Admin")
+                    break
+                }
+
+                if (role) {
+                    newUser.roles = [role]
+
+                }else{
+                    throw new Exception("Cannot get user's role")
+                }
+
+                newUser.save()
+
+            } catch (e) {
+                throw new Exception("Error in creating profile, ${e.message}")
+            }
+        }else{
+            throw new Exception("Error in creating user, ${newUser ? newUser.errors : ''}")
         }
 
         return newUser
