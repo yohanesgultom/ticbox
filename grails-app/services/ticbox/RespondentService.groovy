@@ -12,6 +12,13 @@ class RespondentService {
     }
 
     def updateRespondentDetail(Map<String, String> params) throws Exception {
+        /* begin Geuis edit */
+        def respondent = User.findById(params.id)
+        if (respondent == null) {
+            //throw apa no?
+        }
+        /* end Geuis edit */
+
         def respondentDetail = RespondentDetail.findByRespondentId(params.id)
         respondentDetail = respondentDetail ?: new RespondentDetail(respondentId: params.id).save()
         def profileItems = [:]
@@ -66,10 +73,21 @@ class RespondentService {
 
         respondentDetail.profileItems = profileItems
 
-        respondentDetail['username'] = params.username
-        respondentDetail['email'] = params.email
+        /* begin Geuis edit */
+        //respondentDetail['username'] = params.username
+        //respondentDetail['email'] = params.email
+        respondent['email'] = params.email
+
+        respondent.save()
+        if (respondent.hasErrors()) {
+            //throw apa no?
+        }
 
         respondentDetail.save()
+        if (respondentDetail.hasErrors()) {
+            //throw apa no?
+        }
+        /* end Geuis edit */
     }
 
     def getRespondentDetailFromParams(Map<String, String> params) {
