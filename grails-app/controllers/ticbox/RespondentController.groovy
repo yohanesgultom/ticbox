@@ -31,8 +31,11 @@ class RespondentController {
     }
 
     def modify = {
+        def respondent = User.findById(params.id)
+        respondent.email = params.email
+        respondent.save()
         try {
-            respondentService.updateRespondentDetail(params)
+            respondentService.updateRespondentDetail(respondent,params)
             flash.message = message(code: "general.create.success.message")
         } catch (Exception e) {
             flash.message = message(code: "general.create.failed.message")
