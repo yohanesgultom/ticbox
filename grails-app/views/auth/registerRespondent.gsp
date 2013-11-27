@@ -33,7 +33,14 @@
                 </div>
                 <g:each in="${profileItemList}" var="profileItem">
                     <div class="row-fluid control-group">
-                        <div class="span3"><label class="control-label">${profileItem.label}</label></div>
+                        <div class="span3">
+                            <label class="control-label">
+                                ${profileItem.label}
+                                <g:if test="${profileItem.unit}">
+                                    (${profileItem.unit})
+                                </g:if>
+                            </label>
+                        </div>
                         <div class="span9 controls">
                             <g:if test="${profileItem.type == ticbox.ProfileItem.TYPES.STRING}">
                                 <g:if test="${profileItem.row > 1}">
@@ -47,7 +54,7 @@
                                 <input name="${profileItem.code}" type="text" class="datePicker" placeholder="${message([code: 'app.date.format.input', default: 'dd/MM/yyyy'])}">
                             </g:elseif>
                             <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.NUMBER}">
-                                <input name="${profileItem.code}" type="text" placeholder="${profileItem.min && profileItem.max ? "${profileItem.min} - ${profileItem.max}" : ''}">
+                                <input name="${profileItem.code}" type="text" type="text" class="num" data-max="${profileItem.max}" data-min="${profileItem.min}" placeholder="${profileItem.min && profileItem.max ? "${profileItem.min} - ${profileItem.max}" : ''}">
                             </g:elseif>
                             <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.LOOKUP}">
                                 <g:select name="${profileItem.code}" from="${LookupMaster.findByCode(profileItem.lookupFrom)?.values}" optionKey="key" optionValue="value"/>
@@ -154,6 +161,20 @@
                 }
             }
         });
+
+        $('.num').each(function() {
+            $(this).rules('add', {
+                number: true,
+                range: [$(this).attr('data-min'), $(this).attr('data-max')]
+            });
+        });
+
+        $('.datePicker').each(function() {
+            $(this).rules('add', {
+                date: true
+            });
+        });
+
     });
 </script>
 </body>
