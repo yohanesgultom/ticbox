@@ -36,7 +36,7 @@ class UserService {
                         newUser.respondentProfile = new RespondentProfile()
                         newUser.save()
                         params.id = newUser.id
-                        respondentService.updateRespondentDetail(params)
+                        respondentService.updateRespondentDetail(newUser, params)
                         // reference point
                         respondentService.processReference(params.referrer, newUser)
                     break

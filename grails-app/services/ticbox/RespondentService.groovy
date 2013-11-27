@@ -1,7 +1,5 @@
 package ticbox
 
-import org.springframework.context.i18n.LocaleContextHolder
-
 class RespondentService {
 
     def helperService
@@ -11,16 +9,10 @@ class RespondentService {
         return ProfileItem.list()?.sort{it.seq}
     }
 
-    def updateRespondentDetail(Map<String, String> params) throws Exception {
-        /* begin Geuis edit */
-        def respondent = User.findById(params.id)
-        if (respondent == null) {
-            //throw apa no?
-        }
-        /* end Geuis edit */
+    def updateRespondentDetail(User respondent, Map<String, String> params) throws Exception {
 
-        def respondentDetail = RespondentDetail.findByRespondentId(params.id)
-        respondentDetail = respondentDetail ?: new RespondentDetail(respondentId: params.id).save()
+        def respondentDetail = RespondentDetail.findByRespondentId(respondent.id) ?: new RespondentDetail(respondentId: respondent.id)
+
         def profileItems = [:]
         def items = ProfileItem.all
         for (Map.Entry<String, String> entry : params.entrySet()) {
@@ -72,22 +64,14 @@ class RespondentService {
         }
 
         respondentDetail.profileItems = profileItems
-
-        /* begin Geuis edit */
-        //respondentDetail['username'] = params.username
-        //respondentDetail['email'] = params.email
-        respondent['email'] = params.email
-
-        respondent.save()
-        if (respondent.hasErrors()) {
-            //throw apa no?
-        }
+        respondentDetail['username'] = respondent.username
+        respondentDetail['email'] = respondent.email
 
         respondentDetail.save()
+
         if (respondentDetail.hasErrors()) {
-            //throw apa no?
+            throw new Exception("Failed to update Respondent Details")
         }
-        /* end Geuis edit */
     }
 
     def getRespondentDetailFromParams(Map<String, String> params) {
