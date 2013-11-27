@@ -251,7 +251,7 @@ hr.profilebar {
     padding: 70px 14px 15px;
     width: 1024px;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .wrapper.grey {
