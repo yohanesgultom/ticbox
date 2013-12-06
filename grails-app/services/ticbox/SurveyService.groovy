@@ -100,12 +100,16 @@ class SurveyService {
 
                     //TODO find a way for bulky insert
                     for (RespondentDetail profile : filteredRespondents){
-                        new UserNotification(
+                        UserNotification userNotification = new UserNotification(
                             title: "New survey : ${survey.name}",
                             code: notifCode,
                             username: profile['username'],
                             actionLink: "/respondent/takeSurvey?surveyId=${survey.surveyId}"
-                        ).save()
+                        )
+
+                        userNotification['SERVICE_ID'] = survey.id
+
+                        userNotification.save()
 
                         recipients << [
                             email : profile['email'],

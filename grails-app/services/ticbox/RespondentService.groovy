@@ -9,6 +9,12 @@ class RespondentService {
         return ProfileItem.list()?.sort{it.seq}
     }
 
+    def getSurveyList(RespondentDetail detail){
+        //TODO should be fetching only relevant surveys
+        return Survey.findAllByStatus(Survey.STATUS.IN_PROGRESS)
+
+    }
+
     def updateRespondentDetail(User respondent, Map<String, String> params) throws Exception {
 
         def respondentDetail = RespondentDetail.findByRespondentId(respondent.id) ?: new RespondentDetail(respondentId: respondent.id)
