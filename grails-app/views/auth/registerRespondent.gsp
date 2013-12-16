@@ -54,7 +54,7 @@
                                 <input name="${profileItem.code}" type="text" class="datePicker" placeholder="${message([code: 'app.date.format.input', default: 'dd/MM/yyyy'])}">
                             </g:elseif>
                             <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.NUMBER}">
-                                <input name="${profileItem.code}" type="text" type="text" class="num" data-max="${profileItem.max}" data-min="${profileItem.min}" placeholder="${profileItem.min && profileItem.max ? "${profileItem.min} - ${profileItem.max}" : ''}">
+                                <input name="${profileItem.code}" type="text" class="num" data-max="${profileItem.max}" data-min="${profileItem.min}" placeholder="${profileItem.min && profileItem.max ? "${profileItem.min} - ${profileItem.max}" : ''}" style="text-align:right">
                             </g:elseif>
                             <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.LOOKUP}">
                                 <g:select name="${profileItem.code}" from="${LookupMaster.findByCode(profileItem.lookupFrom)?.values}" optionKey="key" optionValue="value"/>

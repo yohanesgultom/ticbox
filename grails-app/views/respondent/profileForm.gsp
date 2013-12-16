@@ -65,7 +65,7 @@
     <div class="title">Respondent Profile</div>
 </div>
 <div id="profileForm" class="module-content" >
-    <g:form class="form-horizontal" action="modify">
+    <g:form class="form-horizontal" action="modify" name="respProfileForm">
         <!-- hiddens -->
         <g:hiddenField name="id" value="${respondent.id}"/>
 
@@ -124,21 +124,26 @@
             <!-- dynamic fields -->
             <g:each in="${profileItems}" var="profileItem">
                 <div class="control-group">
-                    <label class="control-label">${profileItem.label}</label>
+                    <label class="control-label">
+                        ${profileItem.label}
+                        <g:if test="${profileItem.unit}">
+                            (${profileItem.unit})
+                        </g:if>
+                    </label>
                     <div class="controls">
                         <g:if test="${profileItem.type == ticbox.ProfileItem.TYPES.STRING}">
                             <g:if test="${profileItem.row > 1}">
                                 <g:textArea name="${profileItem.code}" rows="${profileItem.row}" cols="30" maxlength="${profileItem.max}" placeholder="${profileItem.placeHolder}">${respondentDetail?.profileItems[profileItem.code]}</g:textArea>
                             </g:if>
                             <g:else>
-                                <input name="${profileItem.code}" type="text" class="" max="${profileItem.max}" placeholder="${profileItem.placeHolder}" value="${respondentDetail?.profileItems[profileItem.code]}"/>
+                                <input name="${profileItem.code}" type="text" class="" maxlength="${profileItem.max}" placeholder="${profileItem.placeHolder}" value="${respondentDetail?.profileItems[profileItem.code]}"/>
                             </g:else>
                         </g:if>
                         <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.DATE}">
                             <input name="${profileItem.code}" type="text" class="datePicker" placeholder="${message([code: 'app.date.format.input', default: 'dd/MM/yyyy'])}" value="${g.formatDate(format: g.message(code: 'app.date.format.input', default: 'dd/MM/yyyy'), date: respondentDetail?.profileItems[profileItem.code])}" />
                         </g:elseif>
                         <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.NUMBER}">
-                            <input name="${profileItem.code}" type="text" placeholder="${profileItem.min && profileItem.max ? "${profileItem.min} - ${profileItem.max}" : ''}" value="${respondentDetail?.profileItems[profileItem.code]}">
+                            <input name="${profileItem.code}" type="text" placeholder="${profileItem.min && profileItem.max ? "${profileItem.min} - ${profileItem.max}" : ''}" value="${respondentDetail?.profileItems[profileItem.code]}" class="num" data-max="${profileItem.max}" data-min="${profileItem.min}" style="text-align:right">
                         </g:elseif>
                         <g:elseif test="${profileItem.type == ticbox.ProfileItem.TYPES.LOOKUP}">
                             <g:select name="${profileItem.code}" from="${LookupMaster.findByCode(profileItem.lookupFrom)?.values}" optionKey="key" optionValue="value" value="${respondentDetail?.profileItems[profileItem.code]}"/>
@@ -254,6 +259,8 @@
     </div>
 </div>
 
+<g:javascript src="jquery.validate.min.js"/>
+<g:javascript src="additional-methods.min.js"/>
 <script type="text/javascript">
 
     /* Change password modal trigger */
@@ -272,6 +279,31 @@
         $('#change-password-modal').find('input[type="password"]').val('');
     });
 
+    $(document).ready(function() {
+        $('#respProfileForm').validate({
+            rules: {
+                email: {
+                    email: true,
+                    required: true,
+                    minlength: 5
+                }
+            }
+        });
+
+        $('.num').each(function() {
+            $(this).rules('add', {
+                number: true,
+                range: [$(this).attr('data-min'), $(this).attr('data-max')]
+            });
+        });
+
+        $('.datePicker').each(function() {
+            $(this).rules('add', {
+                date: true
+            });
+        });
+
+    });
 </script>
 
 </body>
