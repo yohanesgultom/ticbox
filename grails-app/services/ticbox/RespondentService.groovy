@@ -48,7 +48,7 @@ class RespondentService {
 
                         case ProfileItem.TYPES.NUMBER :
 
-                            profileItems.put(entry.key, Double.valueOf(entry.value))
+                            profileItems.put(entry.key, Integer.valueOf(entry.value))
 
                             break
 
