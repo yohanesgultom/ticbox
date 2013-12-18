@@ -11,5 +11,6 @@ class UrlMappings {
         "/oauth/callback/$provider"(controller: "oauth", action: "callback")
         "/"(view: "ticbox")
         "500"(view:'/error')
+        "/policies/termsOfUse"(view: "/policies/termsOfUse")
 	}
 }

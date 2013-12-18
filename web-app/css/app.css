@@ -376,8 +376,12 @@ a {
     /*border-bottom-width: 0;*/
 }
 
-.module-header .title {
+.title {
     color: #7F9B09;
+}
+
+.module-header .title {
+    padding-bottom: 5px;
 }
 
 .module-message {

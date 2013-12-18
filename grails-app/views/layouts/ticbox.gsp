@@ -26,7 +26,7 @@
 <body>
 
 %{--<div class="container">--}%
-<div class="">
+<div id="doc">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
@@ -36,12 +36,14 @@
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><g:link>Home</g:link></li>
-                        <li><g:link>About us</g:link></li>
-                        <li><g:link>How It Works</g:link></li>
-                        <li><g:link>Resources</g:link></li>
-                        <li><g:link>Pricing</g:link></li>
-                        <li><g:link>Blog</g:link></li>
+                        <li>
+                            <a href="${request.contextPath}/">Home</a>
+                        </li>
+                        <li><a>How It Works</a></li>
+                        <li><a>Pricing</a></li>
+                        <li><a>Resources</a></li>
+                        <li><a>About us</a></li>
+                        <li><a>Blog</a></li>
                     </ul>
 
                     <ul class="login-nav">
@@ -59,7 +61,13 @@
                         </shiro:notAuthenticated>
                         <shiro:authenticated>
                             <li class="log-in">
-                                Hello, ${SecurityUtils.getSubject().getPrincipals().oneByType(String.class)} &nbsp; <g:link controller="auth" action="signOut">Logout</g:link>
+                                <g:link controller="respondent" action="index">
+                                    Hello, ${SecurityUtils.getSubject().getPrincipals().oneByType(String.class)}
+                                </g:link>
+                                &nbsp;
+                                <g:link controller="auth" action="signOut">
+                                    Logout
+                                </g:link>
                             </li>
                         </shiro:authenticated>
                     </ul>
@@ -176,7 +184,9 @@
                     <div class="row">
                         <div class="page-footer">
                             <ul>
-                                <li>Term Of Use</li>
+                                <li>
+                                    <a href="${request.contextPath}/policies/termsOfUse">Terms Of Use</a>
+                                </li>
                                 <li>|</li>
                                 <li>Privacy Policy</li>
                                 <li>|</li>
