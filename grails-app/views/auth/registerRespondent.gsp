@@ -120,7 +120,7 @@
                 <br/>
 
                 <div class="row-fluid">
-                    <div class="span12"><p class="muted"><g:message code="app.register.disclaimer.message"/></p></div>
+                    <div class="span12"><p class="muted"><g:message code="app.register.disclaimer.message" args="${[request.getContextPath()]}"/></p></div>
                 </div>
                 <div class="row-fluid">
                     <div class="span12">

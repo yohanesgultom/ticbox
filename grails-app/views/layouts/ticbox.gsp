@@ -147,7 +147,8 @@
 
                 </div>
 
-                <div style="margin: 15px auto;">
+                %{--<div style="margin: 15px auto;">--}%
+                <div>
                     <div class="row">
 
                         <div class="span2 bottom-nav" style="width: 120px; padding-left: 30px;">
@@ -188,7 +189,9 @@
                                     <a href="${request.contextPath}/policies/termsOfUse">Terms Of Use</a>
                                 </li>
                                 <li>|</li>
-                                <li>Privacy Policy</li>
+                                <li>
+                                    <a href="${request.contextPath}/policies/privacy">Privacy Policy</a>
+                                </li>
                                 <li>|</li>
                                 <li>Anti Spam Policy</li>
                                 <li>|</li>

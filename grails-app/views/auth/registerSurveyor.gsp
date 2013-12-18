@@ -34,7 +34,7 @@
                     <div class="span9"><g:textField name="company"/></div>
                 </div>
                 <div class="row-fluid">
-                    <div class="span8"><p class="muted"><g:message code="app.register.disclaimer.message"/></p></div>
+                    <div class="span8"><p class="muted"><g:message code="app.register.disclaimer.message" args="${[request.getContextPath()]}"/></p></div>
                 </div>
                 <div class="row-fluid">
                     <div class="span8">

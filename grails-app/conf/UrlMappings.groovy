@@ -12,5 +12,6 @@ class UrlMappings {
         "/"(view: "ticbox")
         "500"(view:'/error')
         "/policies/termsOfUse"(view: "/policies/termsOfUse")
-	}
+        "/policies/privacy"(view: "/policies/privacy")
+    }
 }
