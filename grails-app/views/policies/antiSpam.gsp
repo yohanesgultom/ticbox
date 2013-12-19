@@ -26,7 +26,7 @@
                     <p>
                         Your use of Ticbox's website and services is subject to this policy. If you are found to be in violation of our policies at any time, as determined by Ticbox in its sole discretion, we may warn you, or suspend or terminate your account. Please note that in accordance with the Ticbox Terms of Use, we may change this policy at any time. It is your responsibility to keep up-to-date and comply with this policy.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Email requirements</b>
                     </p>
                     <p>
@@ -38,7 +38,7 @@
                     <p>
                         You are responsible for ensuring that the email messages you send in connection with your surveys do not generate a number of spam complaints or bounce rates in excess of industry standards. If Ticbox determines that your level of spam complaints or bounce rate is higher than industry standards, Ticbox, at its sole discretion, has the right to suspend or terminate your use of its website and services. If you receive low response rates, high abuse rates or high bounce rates, we may request additional information regarding your mailing lists to investigate and attempt to resolve the problem, or in some cases we may suspend or remove email privileges on your account.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Email restrictions</b>
                     </p>
                     <p>
@@ -56,7 +56,7 @@
                     <p>
                         You must not send unsolicited mail to newsgroups, message boards, distribution lists or email addresses.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Reporting spam</b>
                     </p>
                     <p>

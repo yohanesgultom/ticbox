@@ -21,7 +21,11 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'ticbox.css')}" type="text/css">
 
     <g:layoutHead/>
-
+    <style type="text/css">
+        .first-p {
+            margin-top: 22px;
+        }
+    </style>
 </head>
 <body>
 

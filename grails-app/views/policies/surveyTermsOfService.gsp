@@ -29,25 +29,23 @@
                     <p>
                         Your use of the Survey Service means you have accepted these Survey Terms and the TOU. If you do not agree with these Survey Terms, please do not use the Survey Service.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Acceptable Use Policy</b>
                     </p>
                     <p>
                         Your use of the Survey Service must comply with all Additional Terms applicable to it, including our:
+                        <ul>
+                            <li><i>Anti-Spam Policy</i></li>
+                            <li><i>Survey Content Policy</i></li>
+                        </ul>
                     </p>
-                    <p>
-                        <i>Anti-Spam Policy.</i>
-                    </p>
-                    <p>
-                        <i>Survey Content Policy</i>
-                    </p>
-                    <p>
+                    <p class="first-p">
                         <b>Survey Closure</b>
                     </p>
                     <p>
                         If we close a survey you are conducting because of a violation of our terms, do not re-open your survey without remedying the violation or getting our prior written permission. Otherwise, we may suspend your account or stop providing the Survey Service to you.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Contracting Entity</b>
                     </p>
                     <p>

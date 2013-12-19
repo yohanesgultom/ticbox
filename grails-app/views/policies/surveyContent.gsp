@@ -23,7 +23,7 @@
                     <p>
                         This policy seeks to maintain a positive experience for both surveyors and survey respondents by helping you to understand what types of survey content and uses of our survey tools are acceptable. If we become aware of survey content that falls outside the boundaries of what is acceptable under this policy, we may remove it and report it. We also take steps to prevent uses of our services that are against the spirit of this policy.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Phishing and Security</b>
                     </p>
                     <p>
@@ -38,7 +38,7 @@
                     <p>
                         We will remove any surveys that are intended to deceive or mislead respondents, including linking to websites with malicious software such as malware.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Privacy and Impersonation</b>
                     </p>
                     <p>
@@ -53,7 +53,7 @@
                     <p>
                         You may not impersonate others when presenting your survey.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Spam</b>
                     </p>
                     <p>
@@ -62,7 +62,7 @@
                     <p>
                         Our services must be used in accordance with our Anti-Spam Policy.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Violence and Hate Speech</b>
                     </p>
                     <p>
@@ -74,19 +74,19 @@
                     <p>
                         Our services may not be used to promote or glorify self-harm.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Bullying and Harassment</b>
                     </p>
                     <p>
                         Our services may not be used to bully or harass a private individual.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Criminal Activity</b>
                     </p>
                     <p>
                         Our services may not be used in furtherance of any criminal activity or in violation of any applicable law.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Pornography and Offensive Graphic Material</b>
                     </p>
                     <p>
@@ -101,7 +101,7 @@
                     <p>
                         We strictly prohibit and report to law enforcement any display of sexual or pornographic content (including in cartoon form) including minors.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>Intellectual Property Infringement</b>
                     </p>
                     <p>
@@ -110,7 +110,7 @@
                     <p>
                         You must have the appropriate rights to any content included in your surveys.
                     </p>
-                    <p>
+                    <p class="first-p">
                         <b>How to Report Policy Violations</b>
                     </p>
                     <p>
