@@ -31,7 +31,7 @@
                     </p>
 
                     <div class="module-header" style="margin: 15px 0 10px 0">
-                        <div style="font-size: 16px; color: #6daac9; font-weight: normal">SURVEYORS</div>
+                        <div class="trust" style="font-size: 16px; font-weight: normal">SURVEYORS</div>
                     </div>
                     <p>
                         When you use Ticbox, we collect information related to you and your use of our services from a variety of sources which are listed below. The sections afterward describe what we do with this information.
@@ -59,13 +59,13 @@
                         </p>
                     </div>
                     <p>
-                        <b>To provide you with our services</b>. This includes providing you with customer support, which requires us to access your information to assist you (such as with design, creation or technical troubleshooting). If you choose to link your Ticbox account to a third party account (such as your Google or Facebook account), we may use the information you allow us to collect from those third parties to provide you with additional features, services, and personalized content.
+                        <b>To provide you with our services</b>. This includes providing you with customer support, which requires us to access your information to assist you (such as with design, creation or technical troubleshooting). If you choose to link your Ticbox account to a third party account (such as your Google or Facebook account), we may use the information you allow us to collect from those third parties to provide you with additional features, services, and personalised content.
                     </p>
                     <div style="background-color: #EAEAE8; padding: 10px 12px 4px 12px; margin: 10px 0">
                         <p>
                             <b>To manage our services</b>. We internally use your information, including certain survey data, for the following limited purposes:
                             <ol>
-                                <li><b>To monitor and improve our service and features</b>. We internally perform statistical and other analysis on the information we collect (including usage data, device data, referral data, and information from page tags) to analyze and measure user behavior and trends, to understand how people use our service and to monitor, troubleshoot and improve our services. However, we do not use the non-public content of surveys (i.e.: the content of questions and responses that you have not publicly shared) for these purposes.</li>
+                                <li><b>To monitor and improve our service and features</b>. We internally perform statistical and other analysis on the information we collect (including usage data, device data, referral data, and information from page tags) to analyse and measure user behavior and trends, to understand how people use our service and to monitor, troubleshoot and improve our services. However, we do not use the non-public content of surveys (i.e.: the content of questions and responses that you have not publicly shared) for these purposes.</li>
                                 <li><b>To assist the enforcement of our Terms of Use.</b></li>
                                 <li><b>To prevent potentially illegal activities.</b></li>
                                 <li><b>To screen for undesirable or abusive activity</b>. For example, we have automated systems that screen content for phishing activities, spam and fraud.</li>
@@ -98,16 +98,16 @@
                         </p>
                     </div>
                     <p>
-                        <b>Security</b>. We are committed to handling your personal information and data with integrity and care. However, regardless of the security protections and precautions we undertake, there is always a risk that your personal data may be viewed and used by unauthorized third party as a result of collecting and transmitting your data through the internet.
+                        <b>Security</b>. We are committed to handling your personal information and data with integrity and care. However, regardless of the security protections and precautions we undertake, there is always a risk that your personal data may be viewed and used by unauthorised third party as a result of collecting and transmitting your data through the internet.
                     </p>
                     <div style="background-color: #EAEAE8; padding: 10px 12px 4px 12px; margin: 10px 0">
                         <p>
-                            <b>Cookies</b>. We use cookies on our websites. Cookies are small bits of data we store on the device you use to access our services so we can recognize repeat users. Each cookie expires after a certain period of time, depending on what we use it for. We use cookies for several reasons:
+                            <b>Cookies</b>. We use cookies on our websites. Cookies are small bits of data we store on the device you use to access our services so we can recognise repeat users. Each cookie expires after a certain period of time, depending on what we use it for. We use cookies for several reasons:
                             <ol>
                                 <li><b>To make our site easier to use</b>. If you use the "Remember me" feature when you sign into your account, we may store your username in a cookie to make it quicker for you to sign in whenever you return to Ticbox.</li>
                                 <li><b>For security reasons</b>. We use cookies to authenticate your identity, such as confirming whether you are currently logged into Ticbox.</li>
-                                <li><b>To provide you with personalized content</b>. We may store user preferences, such as your default language, in cookies to personalize the content you see. We also use cookies to ensure that users cannot retake certain surveys that they have already completed.</li>
-                                <li><b>To improve our services</b>. We use cookies to measure your usage of our websites and track referral data, as well as to occasionally display different versions of content to you. This information helps us to develop and improve our services and optimize the content we display to users.</li>
+                                <li><b>To provide you with personalised content</b>. We may store user preferences, such as your default language, in cookies to personalise the content you see. We also use cookies to ensure that users cannot retake certain surveys that they have already completed.</li>
+                                <li><b>To improve our services</b>. We use cookies to measure your usage of our websites and track referral data, as well as to occasionally display different versions of content to you. This information helps us to develop and improve our services and optimise the content we display to users.</li>
                             </ol>
                         </p>
                     </div>
@@ -116,7 +116,7 @@
                     </p>
 
                     <div class="module-header" style="margin: 15px 0 10px 0">
-                        <div style="font-size: 16px; color: #6daac9; font-weight: normal">RESPONDENTS</div>
+                        <div class="trust" style="font-size: 16px; font-weight: normal">RESPONDENTS</div>
                     </div>
                     <p>
                         <b>Survey responses</b>. We collect and store the survey responses that you submit. The survey creator is responsible for this data and manages it. A survey may ask you to provide personal information or data. If you have any questions about a survey you are taking, please contact the survey creator directly as Ticbox is not responsible for the contest of that survey. The survey creator is usually the same person who invited you to take the survey and sometimes they have their own privacy policy.
@@ -136,12 +136,12 @@
                     </p>
                     <div style="background-color: #EAEAE8; padding: 10px 12px 4px 12px; margin: 10px 0">
                         <p>
-                            <b>Cookies</b>. We use cookies on our websites. Cookies are small bits of data we store on the device you use to access our services so we can recognize repeat users. Each cookie expires after a certain period of time, depending on what we use it for. We use cookies for several reasons:
+                            <b>Cookies</b>. We use cookies on our websites. Cookies are small bits of data we store on the device you use to access our services so we can recognise repeat users. Each cookie expires after a certain period of time, depending on what we use it for. We use cookies for several reasons:
                             <ol>
                                 <li><b>To make our site easier to use</b>. If you use the "Remember me" feature when you sign into your account, we may store your username in a cookie to make it quicker for you to sign in whenever you return to Ticbox.</li>
                                 <li><b>For security reasons</b>. We use cookies to authenticate your identity, such as confirming whether you are currently logged into Ticbox.</li>
-                                <li><b>To provide you with personalized content</b>. We may store user preferences, such as your default language, in cookies to personalize the content you see. We also use cookies to ensure that users cannot retake certain surveys that they have already completed.</li>
-                                <li><b>To improve our services</b>. We use cookies to measure your usage of our websites and track referral data, as well as to occasionally display different versions of content to you. This information helps us to develop and improve our services and optimize the content we display to users.</li>
+                                <li><b>To provide you with personalised content</b>. We may store user preferences, such as your default language, in cookies to personalise the content you see. We also use cookies to ensure that users cannot retake certain surveys that they have already completed.</li>
+                                <li><b>To improve our services</b>. We use cookies to measure your usage of our websites and track referral data, as well as to occasionally display different versions of content to you. This information helps us to develop and improve our services and optimise the content we display to users.</li>
                             </ol>
                         </p>
                     </div>

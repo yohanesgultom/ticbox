@@ -190,14 +190,24 @@
                                 </li>
                                 <li>|</li>
                                 <li>
+                                    <a href="${request.contextPath}/policies/surveyContent">Survey Content Policy</a>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <a href="${request.contextPath}/policies/surveyTermsOfService">Survey Terms Of Service</a>
+                                </li>
+                                <li>|</li>
+                                <li>
                                     <a href="${request.contextPath}/policies/privacy">Privacy Policy</a>
                                 </li>
                                 <li>|</li>
-                                <li>Anti Spam Policy</li>
-                                <li>|</li>
-                                <li>Security Statement</li>
-                                <li>|</li>
-                                <li>Survey Opt-Out</li>
+                                <li>
+                                    <a href="${request.contextPath}/policies/antiSpam">Anti Spam Policy</a>
+                                </li>
+                                %{--<li>|</li>--}%
+                                %{--<li>Security Statement</li>--}%
+                                %{--<li>|</li>--}%
+                                %{--<li>Survey Opt-Out</li>--}%
                             </ul>
                         </div>
                     </div>
